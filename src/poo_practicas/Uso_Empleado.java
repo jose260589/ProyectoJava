@@ -115,3 +115,24 @@ class Empleado {
 	
 	
 }
+// si se deja sin constructor se dice que se usa el constructor heredado
+class Jefatura extends Empleado{
+	//Variable
+	private double incentivo;
+	
+	public Jefatura(String nom, double sue, int agno, int mes, int dia) {
+		super(nom, sue, agno, mes, dia);
+	}
+	//setter
+	public void estableIncentivo(double b) {
+		incentivo=b;
+	}
+	//getter
+	public double dameSueldo() {
+		
+		double sueldoJefe=super.dameSueldo();
+		
+		return sueldoJefe+incentivo;
+	}
+	
+}

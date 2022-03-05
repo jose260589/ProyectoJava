@@ -21,4 +21,5 @@ public class Furgoneta extends Coche {
 		return "La capacidad de carga es: "+capacidad_carga+ " Y las plazas son: "+plazas_extra+".";
 	}
 	
+	
 }
