@@ -27,10 +27,14 @@ public class Uso_Empleado {
 		System.out.println("Nombre: "+empleado3.dame_nombre()+" Sueldo: "+empleado3.dameSueldo()
 		+" Fecha de Alta: "+empleado3.damefecha());*/
 		
-		Empleado[] misEmpleados=new Empleado[4];
+		Empleado[] misEmpleados=new Empleado[6];
 		String nom;
 		double sue;
 		int agno,mes,dia;
+		// se crea empleado jefe
+		Jefatura jefe_RRHH=new Jefatura("maribel", 55000, 2006,9,25);
+		
+		jefe_RRHH.estableIncentivo(2570.00);
 		
 		for(int i=0;i<3;i++) {
 			nom=JOptionPane.showInputDialog("Diga nombre Empleado "+(i+1));
@@ -43,6 +47,12 @@ public class Uso_Empleado {
 		}
 		
 		misEmpleados[3]=new Empleado("jose");
+		
+		misEmpleados[4]=jefe_RRHH; //Polimorfismo en accion. Principio de Sustitucion.
+		//de esta forma funciona llamar metodos de la subclase. 
+		misEmpleados[5]=new Jefatura("Maria", 95000,1999,5,26);
+		//de esta forma no funciona el llamar metodos de la sub clase
+		
 		/* bucle for normal
 		for(int i=0;i<3;i++) {
 			misEmpleados[i].subeSueldo(5);
@@ -53,12 +63,14 @@ public class Uso_Empleado {
 		}*/	
 		//buble for mejorado
 		for(Empleado e: misEmpleados) {
-			e.subeSueldo(5);
+			e.subeSueldo(6);
 		}
 		
 		for(Empleado e: misEmpleados) {
 			System.out.println("Nombre: "+e.dame_nombre()+" Sueldo: "+e.dameSueldo()+" Fecha de Alta: "+e.damefecha());
-		}		
+		}	
+		
+		
 
 	}
 
