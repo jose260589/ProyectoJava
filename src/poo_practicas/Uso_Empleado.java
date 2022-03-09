@@ -53,6 +53,13 @@ public class Uso_Empleado {
 		misEmpleados[5]=new Jefatura("Maria", 95000,1999,5,26);
 		//de esta forma no funciona el llamar metodos de la sub clase
 		
+		//como hacer un casting o cambio de tipo
+		//tipo     nombre a dar  (tipo)   El tipo a cambiar
+		Jefatura jefa_Finanzas=(Jefatura) misEmpleados[5];
+		
+		jefa_Finanzas.estableIncentivo(55000);
+		
+		
 		/* bucle for normal
 		for(int i=0;i<3;i++) {
 			misEmpleados[i].subeSueldo(5);
@@ -128,6 +135,7 @@ class Empleado {
 	
 }
 // si se deja sin constructor se dice que se usa el constructor heredado
+//Final class Jefatura extends Empleado: colocando Final se evita que se siga heredando de la clase Jefatura
 class Jefatura extends Empleado{
 	//Variable
 	private double incentivo;
@@ -147,4 +155,11 @@ class Jefatura extends Empleado{
 		return sueldoJefe+incentivo;
 	}
 	
+}
+
+class Director extends Jefatura{
+	
+	public Director(String nom, double sue, int agno, int mes, int dia) {
+		super(nom, sue, agno, mes, dia);
+	}
 }
