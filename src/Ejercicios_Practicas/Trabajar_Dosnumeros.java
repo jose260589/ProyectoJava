@@ -24,12 +24,12 @@ public class Trabajar_Dosnumeros {
 		System.out.println("La multiplicacion de "+a+"*"+b+" es: "+c);
 		
 		//Division
-		c=a/b;
-		System.out.println("La division de "+a+"/"+b+" es: "+c);
+		c=b/a;
+		System.out.println("La division de "+b+"/"+a+" es: "+c);
 		
-		//pow
-		c=(a%b);
-		System.out.println("residuo es: "+c);
+		//modulo
+		c=(b%a);
+		System.out.println("residuo de la division "+b+"/"+a+" es: "+c);
 		
 		
 	}
