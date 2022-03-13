@@ -1,4 +1,4 @@
-package Ejercicios_Practicas;
+package ejercicios_practicas;
 
 public class Imprimir_nombre {
 

@@ -1,4 +1,4 @@
-package Practicas;
+package practicas;
 
 public class Arrays4 {
 // arrays dimensionales

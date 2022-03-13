@@ -1,4 +1,4 @@
-package Practicas;
+package practicas;
 
 public class PrimeraClase {
 

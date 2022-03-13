@@ -1,4 +1,4 @@
-package Practicas;
+package practicas;
 //use de switch
 
 import java.util.Scanner;

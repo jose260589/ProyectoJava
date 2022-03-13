@@ -1,4 +1,4 @@
-package Practicas;
+package practicas;
 
 public class Usando_Clase_Math {
 

@@ -1,4 +1,4 @@
-package Practicas;
+package practicas;
 // if, else, else if
 import java.util.Scanner;
 

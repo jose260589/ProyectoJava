@@ -1,4 +1,4 @@
-package Practicas;
+package practicas;
 import java.util.Scanner;
 
 public class Entrada_Datos {

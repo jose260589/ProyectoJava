@@ -1,4 +1,4 @@
-package Practicas;
+package practicas;
 
 public class Ejemplo_Array_2D {
 

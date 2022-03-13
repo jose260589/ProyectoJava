@@ -3,7 +3,7 @@
  * static: se puede compartir, pero no pertenece a nadie mas que la clase.
  * 			puede usar, metodos, variables, y clases.
  * */
-package Practicas;
+package practicas;
 
 public class pruebafinal {
 

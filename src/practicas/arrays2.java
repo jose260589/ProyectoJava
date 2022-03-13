@@ -1,4 +1,4 @@
-package Practicas;
+package practicas;
 //bucle for each
 public class arrays2 {
 

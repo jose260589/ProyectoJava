@@ -1,7 +1,7 @@
 /*Sumar, restar, multiplicar, dividir y el resto de dos numeros.
  * */
 
-package Ejercicios_Practicas;
+package ejercicios_practicas;
 
 public class Trabajar_Dosnumeros {
 
