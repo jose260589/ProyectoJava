@@ -31,11 +31,18 @@ public class Uso_Empleado {
 		String nom;
 		double sue;
 		int agno,mes,dia;
+		//se crea para hacer el ejercicicio mas facil
+		misEmpleados[0]=new Empleado("Paco Gomez", 85000, 1990,12,17);
+		
+		misEmpleados[1]=new Empleado("Ana Lopez", 95000, 1995,06,02);
+		
+		misEmpleados[2]=new Empleado("Maria Martin", 105000, 2002,03,15);
+		
 		// se crea empleado jefe
 		Jefatura jefe_RRHH=new Jefatura("maribel", 55000, 2006,9,25);
 		
 		jefe_RRHH.estableIncentivo(2570.00);
-		
+		/* este for es para llenar los datos por teclado
 		for(int i=0;i<3;i++) {
 			nom=JOptionPane.showInputDialog("Diga nombre Empleado "+(i+1));
 			sue=Double.parseDouble(JOptionPane.showInputDialog("Digita sueldo Empleado "+(i+1)));
@@ -44,7 +51,7 @@ public class Uso_Empleado {
 			dia=Integer.parseInt(JOptionPane.showInputDialog("Digita dia"));
 			
 			misEmpleados[i]=new Empleado(nom, sue, agno,mes,dia);
-		}
+		}*/
 		
 		misEmpleados[3]=new Empleado("jose");
 		
@@ -72,6 +79,8 @@ public class Uso_Empleado {
 		for(Empleado e: misEmpleados) {
 			e.subeSueldo(6);
 		}
+		//order el arrays
+		Arrays.sort(misEmpleados);
 		
 		for(Empleado e: misEmpleados) {
 			System.out.println("Nombre: "+e.dame_nombre()+" Sueldo: "+e.dameSueldo()+" Fecha de Alta: "+e.damefecha());
@@ -83,7 +92,7 @@ public class Uso_Empleado {
 
 }
 
-class Empleado {
+class Empleado implements Comparable {
 	
 	public Empleado(String nom, double sue, int agno, int mes, int dia){//clase defina de la clase
 	
@@ -124,6 +133,25 @@ class Empleado {
 		double aumento=sueldo*porcentaje/100;
 		
 		sueldo+=aumento;
+	}
+	
+	
+	//metodo compare to, para ordenar un arrays
+	//hay que implementarlo, lo dice en la case empleado
+	
+	public int compareTo (Object miObjeto){
+		
+		Empleado otroEmpleado=(Empleado) miObjeto;
+		
+		if(this.sueldo<otroEmpleado.sueldo) {
+			return -1;
+		}
+		
+		if(this.sueldo>otroEmpleado.sueldo) {
+			return 1;
+		}		
+		
+		return 0;		
 	}
 	
 	private String nombre;
