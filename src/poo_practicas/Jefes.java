@@ -1,6 +1,6 @@
 package poo_practicas;
-
-public interface Jefes {
+		// se puso a heredar de trabajadores.
+public interface Jefes extends Trabajadores{
 	// se puede obviar public abstract y java lo reconoce igual, pero es mejor ponerlo por principio
-	public abstract String tomar_decisiones(String decision);
+	public String tomar_decisiones (String decision);
 }

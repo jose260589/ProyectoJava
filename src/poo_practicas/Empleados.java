@@ -56,7 +56,13 @@ public class Empleados {
 		
 		//ejemplo con interfaces
 		System.out.println(jefa_Finanzas.tomar_decisiones("Dar más días de vacaciones a los empleados"));
+		System.out.println("El jefe "+jefa_Finanzas.dame_nombre()+
+		" tiene un bonus de: "+jefa_Finanzas.establece_bonus(500));
+		jefa_Finanzas.establece_bonus(500);
 		
+		System.out.println("El jefe "+misEmpleados[3].dame_nombre()+
+		" tiene un bonus de: "+misEmpleados[3].establece_bonus(200));
+		jefa_Finanzas.establece_bonus(500);		
 		
 		//buble for mejorado
 		for(Empleados2 e: misEmpleados) {
@@ -75,7 +81,7 @@ public class Empleados {
 
 }
 
-class Empleados2 implements Comparable {
+class Empleados2 implements Comparable, Trabajadores {
 	
 	public Empleados2(String nom, double sue, int agno, int mes, int dia){//clase defina de la clase
 	
@@ -137,6 +143,12 @@ class Empleados2 implements Comparable {
 		return 0;		
 	}
 	
+	public double establece_bonus(double gratificacion) {
+		
+		return Trabajadores.bonus_base+gratificacion;
+		
+	}
+	
 	private String nombre;
 	
 	private double sueldo;
@@ -169,6 +181,13 @@ class Jefaturas extends Empleados2 implements Jefes{
 	public String tomar_decisiones(String decisiones) {
 		
 		return "Un miembro de la direccion a tomado la decicion: "+decisiones;
+	}
+	
+	public double establece_bonus(double gratificacion) {
+		
+		double prima=2000;
+		
+		return Trabajadores.bonus_base+gratificacion+prima;
 	}
 	
 }
