@@ -53,6 +53,11 @@ public class Empleados {
 			System.out.println("Nombre: "+misEmpleados[i].dame_nombre()+" Sueldo: "+misEmpleados[i].dameSueldo()
 			+" Fecha de Alta: "+misEmpleados[i].damefecha());
 		}*/	
+		
+		//ejemplo con interfaces
+		System.out.println(jefa_Finanzas.tomar_decisiones("Dar más días de vacaciones a los empleados"));
+		
+		
 		//buble for mejorado
 		for(Empleados2 e: misEmpleados) {
 			e.subeSueldo(6);
@@ -142,7 +147,7 @@ class Empleados2 implements Comparable {
 }
 // si se deja sin constructor se dice que se usa el constructor heredado
 //Final class Jefatura extends Empleado: colocando Final se evita que se siga heredando de la clase Jefatura
-class Jefaturas extends Empleados2{
+class Jefaturas extends Empleados2 implements Jefes{
 	//Variable
 	private double incentivo;
 	
@@ -159,6 +164,11 @@ class Jefaturas extends Empleados2{
 		double sueldoJefe=super.dameSueldo();
 		
 		return sueldoJefe+incentivo;
+	}
+	
+	public String tomar_decisiones(String decisiones) {
+		
+		return "Un miembro de la direccion a tomado la decicion: "+decisiones;
 	}
 	
 }
