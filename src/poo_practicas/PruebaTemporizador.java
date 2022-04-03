@@ -1,6 +1,8 @@
 package poo_practicas;
 
 import javax.swing.*;
+
+import java.awt.Toolkit;
 import java.awt.event.*;
 import java.util.Date;
 
@@ -36,6 +38,8 @@ class DameLaHora implements ActionListener{
 		Date ahora=new Date();
 		
 		System.out.println("Te pongo la hora cada "+ ahora);
+		//con esto podemos usar sonidos.
+		Toolkit.getDefaultToolkit().beep();
 		 
 	}
 }
