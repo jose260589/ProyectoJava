@@ -1,13 +1,9 @@
 package poo_practicas;
 
 import javax.swing.*;
-
 import java.awt.event.*;
-
 import java.util.*;
-
 import javax.swing.Timer;
-
 import java.awt.Toolkit;
 
 public class PruebaTemporizador2 {
@@ -19,11 +15,8 @@ public class PruebaTemporizador2 {
 		mireloj.enMarcha();
 		
 		JOptionPane.showMessageDialog(null, "Pulsa para terminar");
-
 	}
-
 }
-
 
 class Reloj{
 	
@@ -38,7 +31,6 @@ class Reloj{
 		this.sonido=sonido;
 		
 	}
-	
 	
 	public void enMarcha() {
 		
